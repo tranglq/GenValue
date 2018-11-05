@@ -11,7 +11,7 @@ public class Package<typename> {
 	private List<String> values = new ArrayList<>();
 	
 	public Package() {
-		
+
 	}
 	
 	public Package(String packagename, String classname, String methodname, String typename, List<String> values) {
@@ -66,4 +66,5 @@ public class Package<typename> {
 	public List<String> getValues(){
 		return this.values;
 	}
+
 }

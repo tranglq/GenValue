@@ -1,5 +1,12 @@
 package trang;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import trang.Objects.Package;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,22 +14,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import trang.FileDescription;
-import trang.Objects.Package;
-
 public class ReadValue {
 	
 	private XSSFWorkbook  workbook;
 	private CellType celltype;
-	private Package pack = new Package();
+	private Package pack;
 
 	public ReadValue() {
 		
@@ -39,7 +35,8 @@ public class ReadValue {
 			else return false;
 		
 	}
-	
+
+	// đọc file .xlsx
 	public List<Package> readPackage(FileDescription filedes) throws IOException {
 		List<Package> packlist = new ArrayList<>();
 		if(CheckFile(filedes)) {
@@ -52,6 +49,7 @@ public class ReadValue {
 			while(rowiterator.hasNext()) {
 				Row row = rowiterator.next();
 				Iterator<Cell> celliterator = row.cellIterator();
+				pack = new Package();
 				if (row.getRowNum()==0) continue;
 				
 				while(celliterator.hasNext()) {
@@ -73,37 +71,8 @@ public class ReadValue {
                             cell.setCellType(CellType.STRING);
                             String value = cell.getStringCellValue();
                             int indexcol = cell.getColumnIndex();
-                            if (indexcol==4) pack.setValue(value);
-							else if (indexcol==5) pack.setValue(value);
-							else if (indexcol==6) pack.setValue(value);
-							else if (indexcol==7) pack.setValue(value);
-							else if (indexcol==8) pack.setValue(value);
-							else if (indexcol==9) pack.setValue(value);
-							else if (indexcol== 10) pack.setValue(value);
-
-//					case _NONE:
-//						break;
-//					case STRING:
-//						String value = cell.getStringCellValue();
-//						int indexcol = cell.getColumnIndex();
-//						if (indexcol == 0) pack.setPackage(value);
-//						else if (indexcol==1) pack.setClass(value);
-//						else if (indexcol==2) pack.setMethod(value);
-//						else if (indexcol==3) pack.setTypeName(value);
-//						case NUMERIC:
-//							String value = cell.getStringCellValue();
-//							int indexcol = cell.getColumnIndex();
-//							if (indexcol==4) pack.setValue(value);
-//							else if (indexcol==5) pack.setValue(value);
-//							else if (indexcol==6) pack.setValue(value);
-//							else if (indexcol==7) pack.setValue(value);
-//							else if (indexcol==8) pack.setValue(value);
-//							else if (indexcol==9) pack.setValue(value);
-//							else if (indexcol== 10) pack.setValue(value);
+                            if (indexcol>=4 && indexcol <=10) pack.setValue(value);
 					}
-						
-
-
 				}
 				packlist.add(pack);
 			}
