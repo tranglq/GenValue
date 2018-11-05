@@ -74,7 +74,13 @@ public class GenFile {
                     writeob.writeObject(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
                     j++;
                 }
-                if (j == packlist.get(i).getValues().size()-1) i++;
+                if (i == packlist.size()-1) break;
+                else {
+                    i++;
+                    j=0;
+                }
+
+
             }
 
             //In ra từ khóa kết thúc khi
