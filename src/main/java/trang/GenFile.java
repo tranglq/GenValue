@@ -35,18 +35,20 @@ public class GenFile {
 		ReadValue readvalue = new ReadValue();
 		List<Package> packlist = readvalue.readPackage(filesource);
 
-        FileDescription filedes = new FileDescription();
-        filedes.setFileDest("");
-        filedes.setFileName("values.txt");
-        String linkfile = filedes.getFileDest() + filedes.getFileName();
-
-        FileOutputStream fileos = new FileOutputStream(linkfile);
-        writeob = new ObjectOutputStream(fileos);
 
         KeyWordInValue keyword = new KeyWordInValue();
 
         int i = 0;
         while(!packlist.isEmpty()) {
+
+            FileDescription filedes = new FileDescription();
+            filedes.setFileDest("");
+            filedes.setFileName("values" + "("+i+").txt");
+            String linkfile = filedes.getFileDest() + filedes.getFileName();
+
+            FileOutputStream fileos = new FileOutputStream(linkfile);
+            writeob = new ObjectOutputStream(fileos);
+
             //In ra các từ khóa và tên package.class khi đây là package đầu tiên
             //hoặc tên package khác tên package trc đó
             //hoặc tên class khác tên class liền trước nó
