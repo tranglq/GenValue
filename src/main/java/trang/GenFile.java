@@ -39,7 +39,7 @@ public class GenFile {
         KeyWordInValue keyword = new KeyWordInValue();
 
         int i = 0;
-        while(!packlist.isEmpty()) {
+        while(i < packlist.size()) {
 
             FileDescription filedes = new FileDescription();
             filedes.setFileDest("");
@@ -52,14 +52,14 @@ public class GenFile {
             //In ra các từ khóa và tên package.class khi đây là package đầu tiên
             //hoặc tên package khác tên package trc đó
             //hoặc tên class khác tên class liền trước nó
-            if (i == 0
-                    || packlist.get(i).getPackage() != packlist.get(i - 1).getPackage()
-                    || packlist.get(i).getClassname() != packlist.get(i - 1).getClassname()) {
+//            if (i == 0
+//                    || packlist.get(i).getPackage() != packlist.get(i - 1).getPackage()
+//                    || packlist.get(i).getClassname() != packlist.get(i - 1).getClassname()) {
                 writeob.writeObject(keyword.getStart() + "\n");
                 writeob.writeObject(keyword.getClassKey() + "\n");
                 writeob.writeObject(packlist.get(i).getPackage() + "." + packlist.get(i).getClassname() + "\n");
                 writeob.writeObject(keyword.getLit() + "\n");
-            }
+//            }
 
             int j = 0;
 
@@ -71,8 +71,8 @@ public class GenFile {
             while (!packlist.get(i).getValues().isEmpty()
                     && (i == 0
                     || (packlist.get(i).getClassname().equals(packlist.get(i - 1).getClassname())
-                       /*&& packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())*/))) {
-                while (j <= packlist.get(i).getValues().size()-1){
+                       && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())))) {
+                while (j < packlist.get(i).getValues().size()){
                     writeob.writeObject(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
                     j++;
                 }
@@ -80,21 +80,22 @@ public class GenFile {
                 else {
                     i++;
                     j=0;
+
                 }
 
 
             }
-
+            writeob.writeObject(keyword.getEnd());
             //In ra từ khóa kết thúc khi
             //Hoặc đây là package cuối
             //Hoặc tên package khác tên package liền sau nó
             //Hoặc tên class khác tên package liền sau nó
-            if (i == (packlist.size()) ||
-                    (!packlist.get(i).getPackage().equals(packlist.get(i + 1).getPackage()) ||
-                            !packlist.get(i).getClassname().equals(packlist.get(i + 1).getClassname()))) {
-                writeob.writeObject(keyword.getEnd());
-            }
-
+//            if (i == (packlist.size()-1) ||
+//                    (!packlist.get(i).getPackage().equals(packlist.get(i + 1).getPackage()) ||
+//                            !packlist.get(i).getClassname().equals(packlist.get(i + 1).getClassname()))) {
+//                writeob.writeObject(keyword.getEnd());
+//            }
+            writeob.close();
             i++;
         }
 
