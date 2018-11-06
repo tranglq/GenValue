@@ -91,7 +91,7 @@ public class GenFile {
                 }
             }  while (i == 0
                     || (packlist.get(i).getClassname().equals(packlist.get(i - 1).getClassname())
-                        && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())));
+                    && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())));
             writeob.writeObject(keyword.getEnd());
             //In ra từ khóa kết thúc khi
             //Hoặc đây là package cuối
