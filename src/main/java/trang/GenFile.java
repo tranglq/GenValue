@@ -39,11 +39,12 @@ public class GenFile {
         KeyWordInValue keyword = new KeyWordInValue();
 
         int i = 0;
+        int filenum = 0;
         while(i < packlist.size()) {
 
             FileDescription filedes = new FileDescription();
             filedes.setFileDest("");
-            filedes.setFileName("values" + "("+i+").txt");
+            filedes.setFileName("values" + "("+filenum+").txt");
             String linkfile = filedes.getFileDest() + filedes.getFileName();
 
             FileOutputStream fileos = new FileOutputStream(linkfile);
@@ -67,24 +68,30 @@ public class GenFile {
             // value ko rỗng
             // và
             //hoặc là đây là package duyệt đầu tiên
-            //hoặc là tên class của package này giống tên class của package liền trước nó
-            while (!packlist.get(i).getValues().isEmpty()
-                    && (i == 0
-                    || (packlist.get(i).getClassname().equals(packlist.get(i - 1).getClassname())
-                       && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())))) {
+//            //hoặc là tên class của package này giống tên class của package liền trước nó
+//            while (!packlist.get(i).getValues().isEmpty()
+//                    && (i == 0
+//                        || (packlist.get(i).getClassname().equals(packlist.get(i - 1).getClassname())
+//                            && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())))) {
+            do{
+                if (packlist.get(i).getValues().isEmpty()) break;
                 while (j < packlist.get(i).getValues().size()){
                     writeob.writeObject(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
                     j++;
                 }
                 if (i == packlist.size()-1) break;
                 else {
-                    i++;
-                    j=0;
-
+                    if (packlist.get(i).getClassname().equals(packlist.get(i + 1).getClassname())
+                            && packlist.get(i).getMethod().equals(packlist.get(i + 1).getMethod())){
+                        i++;
+                        j=0;
+                        continue;
+                    }
+                    else break;
                 }
-
-
-            }
+            }  while (i == 0
+                    || (packlist.get(i).getClassname().equals(packlist.get(i - 1).getClassname())
+                        && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())));
             writeob.writeObject(keyword.getEnd());
             //In ra từ khóa kết thúc khi
             //Hoặc đây là package cuối
@@ -97,6 +104,7 @@ public class GenFile {
 //            }
             writeob.close();
             i++;
+            filenum++;
         }
 
 
