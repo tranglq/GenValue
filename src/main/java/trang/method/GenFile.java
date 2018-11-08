@@ -1,10 +1,11 @@
-package trang;
+package trang.method;
 
 import java.io.*;
 import java.util.List;
 
-import trang.Objects.KeyWordInValue;
-import trang.Objects.Package;
+import trang.form.FileDescriptionForm;
+import trang.form.KeyWordInValueForm;
+import trang.form.PackageForm;
 
 
 public class GenFile {
@@ -14,13 +15,13 @@ public class GenFile {
 	}
 
 	public void GenMethod() throws IOException {
-		List<Package> packages = ReadFile();
+		List<PackageForm> packages = ReadFile();
 
 //        int i = 0;
 //        int filenum = 0;
 //        while(i < packages.size()) {
 //
-//            FileDescription filedes = new FileDescription();
+//            FileDescriptionForm filedes = new FileDescriptionForm();
 //            filedes.setFileDest("");
 //            filedes.setFileName("values" + "(" + filenum + ").txt");
 //            String linkfile = filedes.getFileDest() + filedes.getFileName();
@@ -30,7 +31,7 @@ public class GenFile {
 //
 //        }
 
-        FileDescription filedes = new FileDescription();
+        FileDescriptionForm filedes = new FileDescriptionForm();
         filedes.setFileDest("");
         filedes.setFileName("method.txt");
         String linkfile = filedes.getFileDest() + filedes.getFileName();
@@ -45,16 +46,16 @@ public class GenFile {
 	
 	public void GenValue() throws IOException {
 
-		List<Package> packlist = ReadFile();
+		List<PackageForm> packlist = ReadFile();
 
 
-        KeyWordInValue keyword = new KeyWordInValue();
+        KeyWordInValueForm keyword = new KeyWordInValueForm();
 
         int i = 0;
         int filenum = 0;
         while(i < packlist.size()) {
 
-            FileDescription filedes = new FileDescription();
+            FileDescriptionForm filedes = new FileDescriptionForm();
             filedes.setFileDest("");
             filedes.setFileName("values" + "("+filenum+").txt");
             String linkfile = filedes.getFileDest() + filedes.getFileName();
@@ -117,8 +118,8 @@ public class GenFile {
         }
     }
 
-    public static List<Package> ReadFile() throws IOException {
-        FileDescription filesource = new FileDescription();
+    public static List<PackageForm> ReadFile() throws IOException {
+        FileDescriptionForm filesource = new FileDescriptionForm();
         filesource.setFileDest("C:\\Users\\Administrator\\GenValue\\");
         filesource.setFileName("Value.xlsx");
         ReadValue readvalue = new ReadValue();

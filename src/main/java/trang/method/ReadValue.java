@@ -1,11 +1,12 @@
-package trang;
+package trang.method;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import trang.Objects.Package;
+import trang.form.FileDescriptionForm;
+import trang.form.PackageForm;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,13 +19,13 @@ public class ReadValue {
 	
 	private XSSFWorkbook  workbook;
 	private CellType celltype;
-	private Package pack;
+	private PackageForm pack;
 
 	public ReadValue() {
 		
 	}
 	
-	public boolean CheckFile(FileDescription filedes) {
+	public boolean CheckFile(FileDescriptionForm filedes) {
 		File fo = new File(filedes.getFileDest());
 		
 			if(fo.exists()) {
@@ -37,8 +38,8 @@ public class ReadValue {
 	}
 
 	// đọc file .xlsx
-	public List<Package> readPackage(FileDescription filedes) throws IOException {
-		List<Package> packlist = new ArrayList<>();
+	public List<PackageForm> readPackage(FileDescriptionForm filedes) throws IOException {
+		List<PackageForm> packlist = new ArrayList<>();
 		if(CheckFile(filedes)) {
 			FileInputStream input = new FileInputStream(new File(filedes.getFileDest()+filedes.getFileName()));
 			workbook = new XSSFWorkbook (input);
@@ -49,7 +50,7 @@ public class ReadValue {
 			while(rowiterator.hasNext()) {
 				Row row = rowiterator.next();
 				Iterator<Cell> celliterator = row.cellIterator();
-				pack = new Package();
+				pack = new PackageForm();
 				if (row.getRowNum()==0) continue;
 				
 				while(celliterator.hasNext()) {

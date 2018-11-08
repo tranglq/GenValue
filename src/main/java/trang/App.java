@@ -1,7 +1,7 @@
 package trang;
 
 import java.io.IOException;
-import trang.GenFile;
+import trang.method.GenFile;
 
 public class App 
 {

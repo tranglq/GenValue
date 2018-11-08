@@ -1,14 +1,13 @@
-package trang.Objects;
+package trang.form;
 
-import trang.Objects.TypeValues;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Method {
+public class MethodForm {
 	private String methodname;
-	private List<TypeValues> typeslist = new ArrayList<>();
+	private List<TypeValuesForm> typeslist = new ArrayList<>();
 	
-	public Method(String methodname, List<TypeValues> values) {
+	public MethodForm(String methodname, List<TypeValuesForm> values) {
 		this.methodname = methodname;
 		this.typeslist = values;
 	}
@@ -21,11 +20,11 @@ public class Method {
 		return this.methodname;
 	}
 	
-	public void setAType(TypeValues typename) {
+	public void setAType(TypeValuesForm typename) {
 		this.typeslist.add(typename);
 	}
 	
-	public TypeValues getAtype(int index) {
+	public TypeValuesForm getAtype(int index) {
 		return this.typeslist.get(index);
 	}
 }

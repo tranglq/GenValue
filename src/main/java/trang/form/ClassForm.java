@@ -1,11 +1,11 @@
-package trang.Objects;
+package trang.form;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Class {
+public class ClassForm {
 	private String classname;
-	private List<Method> methodlist = new ArrayList<>();
+	private List<MethodForm> methodlist = new ArrayList<>();
 	
 	public void setClass(String classname) {
 		this.classname = classname;
@@ -15,15 +15,15 @@ public class Class {
 		return this.classname;
 	}
 	
-	public void setAMethod(Method methodname) {
+	public void setAMethod(MethodForm methodname) {
 		this.methodlist.add(methodname);
 	}
 	
-	public Method getAMethod(int index) {
+	public MethodForm getAMethod(int index) {
 		return this.methodlist.get(index);
 	}
 	
-	public List<Method> getMethodList(){
+	public List<MethodForm> getMethodList(){
 		return this.methodlist;
 	}
 	

@@ -1,19 +1,19 @@
-package trang;
+package trang.form;
 
-public class FileDescription {
+public class FileDescriptionForm {
 	private String filename;
 	private String filedest;
 	
-	public FileDescription() {
+	public FileDescriptionForm() {
 		this("Value.xlsx"," ");
 	}
 	
 	
-	public FileDescription(String filename) {
+	public FileDescriptionForm(String filename) {
 		this(filename, " ");
 	}
 	
-	public FileDescription(String filename, String filedest) {
+	public FileDescriptionForm(String filename, String filedest) {
 		this.filename = filename;
 		this.filedest = filedest;
 	}

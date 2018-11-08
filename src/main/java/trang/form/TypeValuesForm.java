@@ -1,9 +1,9 @@
-package trang.Objects;
+package trang.form;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TypeValues {
+public class TypeValuesForm {
 	private String typename;
 	private List<String> values = new ArrayList<>();
 	

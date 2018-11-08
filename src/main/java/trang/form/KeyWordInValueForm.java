@@ -1,12 +1,12 @@
-package trang.Objects;
+package trang.form;
 
-public class KeyWordInValue {
+public class KeyWordInValueForm {
 	private String start;
 	private String endd;
 	private String classkey;
 	private String lit;
 	
-	public KeyWordInValue() {
+	public KeyWordInValueForm() {
 		this.start = "START CLASSLITERALS";
 		this.endd = "END CLASSLITERALS";
 		this.classkey = "CLASSNAME";

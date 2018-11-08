@@ -1,20 +1,20 @@
-package trang.Objects;
+package trang.form;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Package<typename> {
+public class PackageForm<typename> {
 	private String packagename;
 	private String classname;
 	private String methodname;
 	private String typename;
 	private List<String> values = new ArrayList<>();
 	
-	public Package() {
+	public PackageForm() {
 
 	}
 	
-	public Package(String packagename, String classname, String methodname, String typename, List<String> values) {
+	public PackageForm(String packagename, String classname, String methodname, String typename, List<String> values) {
 		this.packagename = packagename;
 		this.classname = classname;
 		this.methodname = methodname;
