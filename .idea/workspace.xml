@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87114d81-2a14-4036-8561-f09d3b5b3ce4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/FileDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/form/FileDescriptionForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/GenFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/GenFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/GenFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/Objects/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/form/ClassForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/Objects/KeyWordInValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/form/KeyWordInValueForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/Objects/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/form/MethodForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/Objects/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/form/PackageForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/Objects/TypeValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/form/TypeValuesForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/ReadValue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/ReadValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/FileDescription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/GenFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/Objects/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/Objects/KeyWordInValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/Objects/Method.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/Objects/Package.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/Objects/TypeValues.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/ReadValue$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/trang/ReadValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,11 +100,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/trang/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="187">
               <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="552">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -278,7 +283,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541676762763" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541677239195" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -332,9 +337,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -343,7 +347,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.30985916" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.30985916" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -359,7 +363,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.09701493" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="7" visible="true" weight="0.09701493" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -492,13 +496,6 @@
     <entry file="file://$PROJECT_DIR$/values(2).txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trang/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/method.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -538,8 +535,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="552">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trang/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
