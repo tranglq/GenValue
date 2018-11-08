@@ -9,7 +9,7 @@ public class App
     {
        GenFile genfile = new GenFile();
        genfile.GenValue();
-
+       genfile.GenMethod();
        System.out.print("Complete to gen file");
     }
 }

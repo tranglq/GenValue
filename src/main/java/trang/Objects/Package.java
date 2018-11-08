@@ -67,4 +67,7 @@ public class Package<typename> {
 		return this.values;
 	}
 
+	public String writeMethod(){
+		return this.getPackage() + "." + this.getClassname() + "." + this.getMethod();
+	}
 }
