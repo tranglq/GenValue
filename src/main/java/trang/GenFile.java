@@ -1,8 +1,6 @@
 package trang;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.List;
 
 import trang.Objects.KeyWordInValue;
@@ -47,8 +45,8 @@ public class GenFile {
             filedes.setFileName("values" + "("+filenum+").txt");
             String linkfile = filedes.getFileDest() + filedes.getFileName();
 
-            FileOutputStream fileos = new FileOutputStream(linkfile);
-            writeob = new ObjectOutputStream(fileos);
+            FileWriter fileos = new FileWriter(new File(linkfile));
+//            writeob = new ObjectOutputStream(fileos);
 
 
             //In ra các từ khóa và tên package.class khi đây là package đầu tiên
@@ -57,10 +55,10 @@ public class GenFile {
 //            if (i == 0
 //                    || packlist.get(i).getPackage() != packlist.get(i - 1).getPackage()
 //                    || packlist.get(i).getClassname() != packlist.get(i - 1).getClassname()) {
-                writeob.writeObject(keyword.getStart() + "\n");
-                writeob.writeObject(keyword.getClassKey() + "\n");
-                writeob.writeObject(packlist.get(i).getPackage() + "." + packlist.get(i).getClassname() + "\n");
-                writeob.writeObject(keyword.getLit() + "\n");
+                fileos.write(keyword.getStart() + "\n");
+                fileos.write(keyword.getClassKey() + "\n");
+                fileos.write(packlist.get(i).getPackage() + "." + packlist.get(i).getClassname() + "\n");
+                fileos.write(keyword.getLit() + "\n");
 
 
             System.out.print(keyword.getStart() + "\n");
@@ -83,7 +81,7 @@ public class GenFile {
             do{
                 if (packlist.get(i).getValues().isEmpty()) break;
                 while (j < packlist.get(i).getValues().size()){
-                    writeob.writeObject(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
+                    fileos.write(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
                     System.out.print(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
                     j++;
                 }
@@ -100,7 +98,7 @@ public class GenFile {
             }  while (i == 0
                     || (packlist.get(i).getClassname().equals(packlist.get(i - 1).getClassname())
                     && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())));
-            writeob.writeObject(keyword.getEnd());
+            fileos.write(keyword.getEnd());
             System.out.print(keyword.getEnd());
             //In ra từ khóa kết thúc khi
             //Hoặc đây là package cuối
@@ -109,9 +107,9 @@ public class GenFile {
 //            if (i == (packlist.size()-1) ||
 //                    (!packlist.get(i).getPackage().equals(packlist.get(i + 1).getPackage()) ||
 //                            !packlist.get(i).getClassname().equals(packlist.get(i + 1).getClassname()))) {
-//                writeob.writeObject(keyword.getEnd());
+//                fileos.write(keyword.getEnd());
 //            }
-            writeob.close();
+            fileos.close();
             i++;
             filenum++;
         }
