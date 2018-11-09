@@ -18,13 +18,15 @@ public class ReadJavaFile {
         fileNameForm.setFileName("javafile.java");
 
         String data = readFile(fileNameForm.get());
-
         String[] words = data.split("\\s");
         PackageForm packageForm = new PackageForm();
-        int methodnum = 0;
+
+
         for (int i = 0; i < words.length; i++){
             String packagename = null;
             String classname = null;
+            String methodname = null;
+            List<String> type = new ArrayList<>();
 
             // Neu tu khoa la package thi chuoi ke tiep la ten cua package
             if (words[i].equals("package")){
@@ -42,34 +44,37 @@ public class ReadJavaFile {
                 System.out.println(packageForm.getClassname());
             }
 
-            if (words[i].equals("public")){
+            if (words[i].equals("public") && i < words.length-1){
                 i++;
-                if (words[i].equals("static")){
+                if (words[i].equals("static") && i < words.length-1){
                     i++;
-                }
-
-                if (methodnum != 0){
-                    PackageForm packageForm1 = new PackageForm();
-                    packageForm1.setPackage(packageForm.getPackage());
-                    packageForm1.setClass(packageForm.getClassname());
-
-                    int indexSymbol1 = words[i].indexOf("(");
-                    int indexSymbol2 = words[i].indexOf(")");
-                    String methodname = words[i].substring(0, indexSymbol1);
-                    packageForm1.setMethod(methodname);
-                    String values = words[i].substring(indexSymbol1+1, indexSymbol2);
-                    String[] valuelist = values.split(",");
                 }
                 int indexSymbol1 = words[i].indexOf("(");
                 int indexSymbol2 = words[i].indexOf(")");
-                String methodname = words[i].substring(0, indexSymbol1);
-                packageForm.setMethod(methodname);
-                String values = words[i].substring(indexSymbol1+1, indexSymbol2);
-                String[] valuelist = values.split(",");
+                methodname = words[i].substring(0, indexSymbol1) + "(";
+//                packageForm.setMethod(method);
+                String breakString = words[i].substring(indexSymbol1+1, indexSymbol2-1);
+                String[] breakStringList = breakString.split(",");
 
-                for (int j = 0; j < valuelist.length; j++){
-
+                for (int j = 0; j < breakStringList.length; j++){
+                    String [] types = breakStringList[j].split("\\s");
+                    type.add(types[0]);
+                    methodname = methodname + types[0];
+                    if (j <breakStringList.length-1) methodname = methodname + ",";
+                    else   methodname = methodname + ")";
                 }
+
+
+                for (int j = 0; j < breakStringList.length; j++){
+                    String [] types = breakStringList[j].split("\\s");
+                    type.add(types[0]);
+                    packageForm.setPackage(packagename);
+                    packageForm.setClass(classname);
+                    packageForm.setMethod(methodname);
+                    packageForm.setTypeName(types[0]);
+                    packageForms.add(packageForm);
+                }
+
             }
         }
         return packageForms;
