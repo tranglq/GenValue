@@ -3,7 +3,7 @@ package trang.method;
 import java.io.*;
 import java.util.List;
 
-import trang.form.FileDescriptionForm;
+import trang.form.FileNameForm;
 import trang.form.KeyWordInValueForm;
 import trang.form.PackageForm;
 
@@ -21,7 +21,7 @@ public class GenFile {
 //        int filenum = 0;
 //        while(i < packages.size()) {
 //
-//            FileDescriptionForm filedes = new FileDescriptionForm();
+//            FileNameForm filedes = new FileNameForm();
 //            filedes.setFileDest("");
 //            filedes.setFileName("values" + "(" + filenum + ").txt");
 //            String linkfile = filedes.getFileDest() + filedes.getFileName();
@@ -31,7 +31,7 @@ public class GenFile {
 //
 //        }
 
-        FileDescriptionForm filedes = new FileDescriptionForm();
+        FileNameForm filedes = new FileNameForm();
         filedes.setFileDest("");
         filedes.setFileName("method.txt");
         String linkfile = filedes.getFileDest() + filedes.getFileName();
@@ -55,7 +55,7 @@ public class GenFile {
         int filenum = 0;
         while(i < packlist.size()) {
 
-            FileDescriptionForm filedes = new FileDescriptionForm();
+            FileNameForm filedes = new FileNameForm();
             filedes.setFileDest("");
             filedes.setFileName("values" + "("+filenum+").txt");
             String linkfile = filedes.getFileDest() + filedes.getFileName();
@@ -69,13 +69,13 @@ public class GenFile {
             fileos.write(keyword.getClassKey() + "\n");
             fileos.write(packlist.get(i).getPackage() + "." + packlist.get(i).getClassname() + "\n");
             fileos.write(keyword.getLit() + "\n");
+//
+//
+//            System.out.print(keyword.getStart() + "\n");
+//            System.out.print(keyword.getClassKey() + "\n");
+//            System.out.print(packlist.get(i).getPackage() + "." + packlist.get(i).getClassname() + "\n");
+//            System.out.print(keyword.getLit() + "\n");
 
-
-            System.out.print(keyword.getStart() + "\n");
-            System.out.print(keyword.getClassKey() + "\n");
-            System.out.print(packlist.get(i).getPackage() + "." + packlist.get(i).getClassname() + "\n");
-            System.out.print(keyword.getLit() + "\n");
-//            }
 
             int j = 0;
 
@@ -89,7 +89,7 @@ public class GenFile {
                 if (packlist.get(i).getValues().isEmpty()) break;
                 while (j < packlist.get(i).getValues().size()){
                     fileos.write(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
-                    System.out.print(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
+//                    System.out.print(packlist.get(i).getTypeName() + ":" + packlist.get(i).getValueList(j) + "\n");
                     j++;
                 }
                 if (i == packlist.size()-1) break;
@@ -106,7 +106,7 @@ public class GenFile {
                     || (packlist.get(i).getClassname().equals(packlist.get(i - 1).getClassname())
                     && packlist.get(i).getMethod().equals(packlist.get(i - 1).getMethod())));
             fileos.write(keyword.getEnd());
-            System.out.print(keyword.getEnd());
+//            System.out.print(keyword.getEnd());
             //In ra từ khóa kết thúc khi
             //Hoặc đây là package cuối
             //Hoặc tên package khác tên package liền sau nó
@@ -119,7 +119,7 @@ public class GenFile {
     }
 
     public static List<PackageForm> ReadFile() throws IOException {
-        FileDescriptionForm filesource = new FileDescriptionForm();
+        FileNameForm filesource = new FileNameForm();
         filesource.setFileDest("C:\\Users\\Administrator\\GenValue\\");
         filesource.setFileName("Value.xlsx");
         ReadValue readvalue = new ReadValue();

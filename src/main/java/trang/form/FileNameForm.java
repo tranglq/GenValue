@@ -1,19 +1,19 @@
 package trang.form;
 
-public class FileDescriptionForm {
+public class FileNameForm {
 	private String filename;
 	private String filedest;
 	
-	public FileDescriptionForm() {
+	public FileNameForm() {
 		this("Value.xlsx"," ");
 	}
 	
 	
-	public FileDescriptionForm(String filename) {
+	public FileNameForm(String filename) {
 		this(filename, " ");
 	}
 	
-	public FileDescriptionForm(String filename, String filedest) {
+	public FileNameForm(String filename, String filedest) {
 		this.filename = filename;
 		this.filedest = filedest;
 	}
@@ -33,5 +33,9 @@ public class FileDescriptionForm {
 	
 	public String getFileName() {
 		return this.filename;
+	}
+
+	public String get(){
+		return this.filedest + this.filename;
 	}
 }

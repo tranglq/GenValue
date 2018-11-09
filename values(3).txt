@@ -1,0 +1,16 @@
+START CLASSLITERALS
+CLASSNAME
+trang.MyMatrix
+LITERALS
+int:999
+int:-486
+int:315
+int:132
+int:425
+int:557
+int:999
+int:-486
+int:315
+int:132
+int:425
+END CLASSLITERALS

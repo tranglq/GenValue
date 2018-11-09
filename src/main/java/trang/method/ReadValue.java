@@ -5,7 +5,7 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import trang.form.FileDescriptionForm;
+import trang.form.FileNameForm;
 import trang.form.PackageForm;
 
 import java.io.File;
@@ -25,7 +25,7 @@ public class ReadValue {
 		
 	}
 	
-	public boolean CheckFile(FileDescriptionForm filedes) {
+	public boolean CheckFile(FileNameForm filedes) {
 		File fo = new File(filedes.getFileDest());
 		
 			if(fo.exists()) {
@@ -38,7 +38,7 @@ public class ReadValue {
 	}
 
 	// đọc file .xlsx
-	public List<PackageForm> readPackage(FileDescriptionForm filedes) throws IOException {
+	public List<PackageForm> readPackage(FileNameForm filedes) throws IOException {
 		List<PackageForm> packlist = new ArrayList<>();
 		if(CheckFile(filedes)) {
 			FileInputStream input = new FileInputStream(new File(filedes.getFileDest()+filedes.getFileName()));
