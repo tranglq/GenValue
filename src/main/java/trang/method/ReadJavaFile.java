@@ -1,6 +1,5 @@
 package trang.method;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.Lister;
 import trang.form.FileNameForm;
 import trang.form.PackageForm;
 
@@ -21,12 +20,14 @@ public class ReadJavaFile {
         String[] words = data.split("\\s");
         PackageForm packageForm = new PackageForm();
 
+        String packagename = null;
+        String classname = null;
+        String methodname = null;
+        List<String> type = new ArrayList<>();
+
 
         for (int i = 0; i < words.length; i++){
-            String packagename = null;
-            String classname = null;
-            String methodname = null;
-            List<String> type = new ArrayList<>();
+
 
             // Neu tu khoa la package thi chuoi ke tiep la ten cua package
             if (words[i].equals("package")){
@@ -44,35 +45,70 @@ public class ReadJavaFile {
                 System.out.println(packageForm.getClassname());
             }
 
-            if (words[i].equals("public") && i < words.length-1){
-                i++;
-                if (words[i].equals("static") && i < words.length-1){
+            if (classname != null && words[i].equals("public") && i < words.length-1){
+                while (!words[i].contains("(")){
                     i++;
                 }
-                int indexSymbol1 = words[i].indexOf("(");
-                int indexSymbol2 = words[i].indexOf(")");
-                methodname = words[i].substring(0, indexSymbol1) + "(";
-//                packageForm.setMethod(method);
-                String breakString = words[i].substring(indexSymbol1+1, indexSymbol2-1);
-                String[] breakStringList = breakString.split(",");
+                if (words[i].contains("(")){
+                    int indexmethod = words[i].indexOf("(");
+                    int lengthmethod = words[i].length();
+                    if (indexmethod == lengthmethod-1 && indexmethod == 0){
+                        methodname = words[i-1] + "(";
+                        type.set(0, words[i++]);
+                    }
+                    else if (indexmethod == lengthmethod && indexmethod != 0){
+                            methodname = words[i].substring(0,indexmethod-1) + "(";
+                            type.set(0, words[i++]);
+                    } else if (indexmethod != lengthmethod && indexmethod == 0 ){
+                            methodname = words[i-1] + "(";
+                            type.set(0, words[i].substring(indexmethod + 1, lengthmethod - 1));
+                    } else {
+                            methodname = words[i].substring(0, indexmethod);
+                            type.set(0, words[i].substring(indexmethod+1, lengthmethod-1));
+                    }
 
-                for (int j = 0; j < breakStringList.length; j++){
-                    String [] types = breakStringList[j].split("\\s");
-                    type.add(types[0]);
-                    methodname = methodname + types[0];
-                    if (j <breakStringList.length-1) methodname = methodname + ",";
-                    else   methodname = methodname + ")";
-                }
 
 
-                for (int j = 0; j < breakStringList.length; j++){
-                    String [] types = breakStringList[j].split("\\s");
-                    type.add(types[0]);
-                    packageForm.setPackage(packagename);
-                    packageForm.setClass(classname);
-                    packageForm.setMethod(methodname);
-                    packageForm.setTypeName(types[0]);
-                    packageForms.add(packageForm);
+
+                    int j = 0;
+                    while (!words[i].contains(")")){
+                        j++;
+                        i++;
+                        if (words[i].contains(",")){
+                            int index = words[i].indexOf(",");
+                            int length = words[i].length();
+                            if (index == length-1) i++;
+                            else {
+                                type.set(j, words[i].substring(index + 1, length - 1));
+                                j++;
+                                i++;
+                            }
+                        }
+
+                    }
+                    for (int k = 0; k < type.size(); k++){
+                        methodname = methodname + type.get(k);
+                        if (k == type.size()-1) {
+                            methodname = methodname + ")";
+                        }
+                        else {
+                            methodname = methodname + ", ";
+                        }
+                    }
+
+                    for (int k = 0; k < type.size(); k++){
+                        packageForm.setPackage(packagename);
+                        packageForm.setClass(classname);
+                        packageForm.setMethod(methodname);
+                        packageForm.setTypeName(type.get(k));
+                        packageForms.add(packageForm);
+
+                        System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() + "\t" + packageForm.getValueList(packageForm.getValues().size()));
+
+                        packageForms.add(packageForm);
+
+                    }
+                    i++;
                 }
 
             }
