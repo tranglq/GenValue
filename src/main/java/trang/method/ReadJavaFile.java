@@ -54,17 +54,21 @@ public class ReadJavaFile {
                     int lengthmethod = words[i].length();
                     if (indexmethod == lengthmethod-1 && indexmethod == 0){
                         methodname = words[i-1] + "(";
-                        type.set(0, words[i++]);
+                        String a = words[i++];
+                        type.add(a);
                     }
                     else if (indexmethod == lengthmethod && indexmethod != 0){
-                            methodname = words[i].substring(0,indexmethod-1) + "(";
-                            type.set(0, words[i++]);
+                        methodname = words[i].substring(0,indexmethod) + "(";
+                        String a = words[i++];
+                        type.add(a);
                     } else if (indexmethod != lengthmethod && indexmethod == 0 ){
-                            methodname = words[i-1] + "(";
-                            type.set(0, words[i].substring(indexmethod + 1, lengthmethod - 1));
+                        methodname = words[i-1] + "(";
+                        String a = words[i].substring(indexmethod + 1, lengthmethod);
+                        type.add(a);
                     } else {
-                            methodname = words[i].substring(0, indexmethod);
-                            type.set(0, words[i].substring(indexmethod+1, lengthmethod-1));
+                        methodname = words[i].substring(0, indexmethod);
+                        String a = words[i].substring(indexmethod+1, lengthmethod);
+                        type.add(a);
                     }
 
 
@@ -79,7 +83,7 @@ public class ReadJavaFile {
                             int length = words[i].length();
                             if (index == length-1) i++;
                             else {
-                                type.set(j, words[i].substring(index + 1, length - 1));
+                                type.add(words[i].substring(index + 1, length - 1));
                                 j++;
                                 i++;
                             }
@@ -103,7 +107,7 @@ public class ReadJavaFile {
                         packageForm.setTypeName(type.get(k));
                         packageForms.add(packageForm);
 
-                        System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() + "\t" + packageForm.getValueList(packageForm.getValues().size()));
+//                        System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() + "\t" + packageForm.getValueList(packageForm.getValues().size()));
 
                         packageForms.add(packageForm);
 
