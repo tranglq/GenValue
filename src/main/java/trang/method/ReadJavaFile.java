@@ -28,7 +28,6 @@ public class ReadJavaFile {
 
         for (int i = 0; i < words.length; i++){
 
-            type.clear();
             // Neu tu khoa la package thi chuoi ke tiep la ten cua package
             if (words[i].equals("package")){
                 i++;

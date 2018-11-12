@@ -13,8 +13,8 @@ public class App
        genfile.GenValue();
        genfile.GenMethod();
 
-        ReadJavaFile readJavaFile = new ReadJavaFile();
-        readJavaFile.readJavaFile();
+//        ReadJavaFile readJavaFile = new ReadJavaFile();
+//        readJavaFile.readJavaFile();
 
         GenFileExcel genFileExcel = new GenFileExcel();
         genFileExcel.genFileExcel();
