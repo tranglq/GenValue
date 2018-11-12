@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87114d81-2a14-4036-8561-f09d3b5b3ce4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Value1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trang/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trang/method/ReadJavaFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/method/ReadJavaFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.ĐỒ ÁN.doc#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.ĐỒ ÁN.doc#" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ĐỒ ÁN.doc" beforeDir="false" afterPath="$PROJECT_DIR$/ĐỒ ÁN.doc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -244,7 +240,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542004096239" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542009400206" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
