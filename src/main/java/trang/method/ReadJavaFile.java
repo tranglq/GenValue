@@ -34,15 +34,11 @@ public class ReadJavaFile {
                 i++;
                 int lengthPackName = (words[i]).length();
                 packagename = words[i].substring(0, lengthPackName-1); //lay chuoi package bo di kyy tu ";" o cuoi chuoi
-//                packageForm.setPackage(packagename);
-//                System.out.println(packageForm.getPackage());
             }
 
             if (words[i].equals("class")){
                 i++;
                 classname = words[i];
-//                packageForm.setClass(words[i]);
-//                System.out.println(packageForm.getClassname());
             }
 
             if (classname != null && words[i].equals("public") && i < words.length-1){
@@ -52,31 +48,37 @@ public class ReadJavaFile {
                 if (words[i].contains("(")){
                     int indexmethod = words[i].indexOf("(");
                     int lengthmethod = words[i].length();
-                    if (indexmethod == lengthmethod-1 && indexmethod == 0){
-                        methodname = words[i-1] + "(";
-                        String a = words[i++];
-                        type.add(a);
+                    if (words[i].contains(")")){
+                        methodname = words[i].substring(0, indexmethod) + "()";
+                        type.clear();
+
                     }
-                    else if (indexmethod == lengthmethod && indexmethod != 0){
-                        methodname = words[i].substring(0,indexmethod) + "(";
-                        String a = words[i++];
-                        type.add(a);
-                    } else if (indexmethod != lengthmethod && indexmethod == 0 ){
-                        methodname = words[i-1] + "(";
-                        String a = words[i].substring(indexmethod + 1, lengthmethod);
-                        type.add(a);
-                    } else {
-                        methodname = words[i].substring(0, indexmethod) + "(";
-                        String a = words[i].substring(indexmethod+1, lengthmethod);
-                        type.add(a);
+                    else {
+
+                        if (indexmethod == lengthmethod-1 && indexmethod == 0){
+                            methodname = words[i-1] + "(";
+                            String a = words[i++];
+                            type.add(a);
+                        }
+                        else if (indexmethod == lengthmethod && indexmethod != 0){
+                            methodname = words[i].substring(0,indexmethod) + "(";
+                            String a = words[i++];
+                            type.add(a);
+                        } else if (indexmethod != lengthmethod && indexmethod == 0 ){
+                            methodname = words[i-1] + "(";
+                            String a = words[i].substring(indexmethod + 1, lengthmethod);
+                            type.add(a);
+                        } else {
+                            methodname = words[i].substring(0, indexmethod) + "(";
+                            String a = words[i].substring(indexmethod+1, lengthmethod);
+                            type.add(a);
+                        }
+                        i++;
                     }
 
 
 
-
-                    int j = 0;
                     while (!words[i].contains(")")){
-                        j++;
                         i++;
                         if (words[i].contains(",")){
                             int index = words[i].indexOf(",");
@@ -98,36 +100,44 @@ public class ReadJavaFile {
                                 type.add(a);
                             }
                             i++;
-                            j++;
+
                         }
                         else {
                             i++;
-                            j++;
-                            continue;
-                        }
-                    }
-                    for (int k = 0; k < type.size(); k++){
-                        methodname = methodname + type.get(k);
-                        if (k == type.size()-1) {
-                            methodname = methodname + ")";
-                        }
-                        else {
-                            methodname = methodname + ", ";
                         }
                     }
 
-                    for (int k = 0; k < type.size(); k++){
+                    if (type.isEmpty()){
                         packageForm.setPackage(packagename);
                         packageForm.setClass(classname);
                         packageForm.setMethod(methodname);
-                        packageForm.setTypeName(type.get(k));
                         packageForms.add(packageForm);
-
-                        System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() + "\t" + type.get(k));
-
-                        packageForms.add(packageForm);
+                        System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() );
 
                     }
+                    else {
+                        for (int k = 0; k < type.size(); k++){
+                            methodname = methodname + type.get(k);
+                            if (k == type.size()-1) {
+                                methodname = methodname + ")";
+                            }
+                            else {
+                                methodname = methodname + ", ";
+                            }
+                        }
+
+                        for (int k = 0; k < type.size(); k++) {
+                            packageForm.setPackage(packagename);
+                            packageForm.setClass(classname);
+                            packageForm.setMethod(methodname);
+                            packageForm.setTypeName(type.get(k));
+                            packageForms.add(packageForm);
+
+                            System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() + "\t" + type.get(k));
+                        }
+
+                    }
+                    type.clear();
                     i++;
                 }
 
@@ -138,7 +148,6 @@ public class ReadJavaFile {
 
 
     public String readFile(String filepathname) throws IOException {
-
         String data = "";
         data = new String(Files.readAllBytes(Paths.get(filepathname)));
         return data;
