@@ -16,7 +16,7 @@ public class ReadJavaFile {
         fileNameForm.setFileDest("");
         fileNameForm.setFileName("javafile.java");
 
-        String data = readFile(fileNameForm.get());
+        String data = fileNameForm.readFile();
         String[] words = data.split("\\s");
         PackageForm packageForm = new PackageForm();
 
@@ -28,7 +28,7 @@ public class ReadJavaFile {
 
         for (int i = 0; i < words.length; i++){
 
-
+            type.clear();
             // Neu tu khoa la package thi chuoi ke tiep la ten cua package
             if (words[i].equals("package")){
                 i++;
@@ -75,8 +75,6 @@ public class ReadJavaFile {
                         }
                         i++;
                     }
-
-
 
                     while (!words[i].contains(")")){
                         i++;
@@ -125,7 +123,6 @@ public class ReadJavaFile {
                                 methodname = methodname + ", ";
                             }
                         }
-
                         for (int k = 0; k < type.size(); k++) {
                             packageForm.setPackage(packagename);
                             packageForm.setClass(classname);
@@ -137,19 +134,12 @@ public class ReadJavaFile {
                         }
 
                     }
-                    type.clear();
+
                     i++;
                 }
 
             }
         }
         return packageForms;
-    }
-
-
-    public String readFile(String filepathname) throws IOException {
-        String data = "";
-        data = new String(Files.readAllBytes(Paths.get(filepathname)));
-        return data;
     }
 }

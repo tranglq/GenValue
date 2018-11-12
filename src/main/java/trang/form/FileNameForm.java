@@ -1,5 +1,9 @@
 package trang.form;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class FileNameForm {
 	private String filename;
 	private String filedest;
@@ -37,5 +41,12 @@ public class FileNameForm {
 
 	public String get(){
 		return this.filedest + this.filename;
+	}
+
+
+	public String readFile() throws IOException {
+		String data = "";
+		data = new String(Files.readAllBytes(Paths.get(get())));
+		return data;
 	}
 }
