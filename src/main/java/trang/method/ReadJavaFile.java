@@ -35,14 +35,14 @@ public class ReadJavaFile {
                 int lengthPackName = (words[i]).length();
                 packagename = words[i].substring(0, lengthPackName-1); //lay chuoi package bo di kyy tu ";" o cuoi chuoi
 //                packageForm.setPackage(packagename);
-                System.out.println(packageForm.getPackage());
+//                System.out.println(packageForm.getPackage());
             }
 
             if (words[i].equals("class")){
                 i++;
                 classname = words[i];
 //                packageForm.setClass(words[i]);
-                System.out.println(packageForm.getClassname());
+//                System.out.println(packageForm.getClassname());
             }
 
             if (classname != null && words[i].equals("public") && i < words.length-1){
@@ -66,7 +66,7 @@ public class ReadJavaFile {
                         String a = words[i].substring(indexmethod + 1, lengthmethod);
                         type.add(a);
                     } else {
-                        methodname = words[i].substring(0, indexmethod);
+                        methodname = words[i].substring(0, indexmethod) + "(";
                         String a = words[i].substring(indexmethod+1, lengthmethod);
                         type.add(a);
                     }
@@ -81,14 +81,30 @@ public class ReadJavaFile {
                         if (words[i].contains(",")){
                             int index = words[i].indexOf(",");
                             int length = words[i].length();
-                            if (index == length-1) i++;
-                            else {
-                                type.add(words[i].substring(index + 1, length - 1));
-                                j++;
-                                i++;
-                            }
-                        }
 
+                            if (index == length-1 && index == 0){
+                                String a = words[i++];
+                                type.add(a);
+                            }
+                            else if (index == length-1 && index != 0){
+                                String a = words[i++];
+                                type.add(a);
+                            }
+                            else if (index != length && index == 0 ){
+                                String a = words[i].substring(index + 1, length);
+                                type.add(a);
+                            } else {
+                                String a = words[i].substring(index+1, length);
+                                type.add(a);
+                            }
+                            i++;
+                            j++;
+                        }
+                        else {
+                            i++;
+                            j++;
+                            continue;
+                        }
                     }
                     for (int k = 0; k < type.size(); k++){
                         methodname = methodname + type.get(k);
@@ -107,7 +123,7 @@ public class ReadJavaFile {
                         packageForm.setTypeName(type.get(k));
                         packageForms.add(packageForm);
 
-//                        System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() + "\t" + packageForm.getValueList(packageForm.getValues().size()));
+                        System.out.println(packageForm.getPackage() + "\t" + packageForm.getClassname() + "\t" + packageForm.getMethod() + "\t" + type.get(k));
 
                         packageForms.add(packageForm);
 
