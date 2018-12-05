@@ -3,35 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="87114d81-2a14-4036-8561-f09d3b5b3ce4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(0).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(1).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(10).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(11).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(12).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(13).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(14).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(15).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(2).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(3).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(4).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(5).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(6).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(7).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(8).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExcelFile(9).xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/genfile/src/main/java/trang/method/GenFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/method.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/form/PackageForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/form/PackageForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Value.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Value1.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/trang/method/GenFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/GenFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trang/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trang/form/PackageForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/form/PackageForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/trang/method/GenFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/method/GenFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/trang/method/GenFileExcel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/method/GenFileExcel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/trang/method/ReadValue$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/method/ReadValue$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/trang/method/ReadValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/trang/method/ReadValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/values(0).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/values(1).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/values(2).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/values(3).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/values(4).txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
-              <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+              <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,7 +54,7 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/trang/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-276">
+            <state relative-caret-position="-184">
               <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,8 +66,8 @@
       <file leaf-file-name="ReadValue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-490">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="-245">
+              <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -91,8 +75,8 @@
       <file leaf-file-name="GenFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/GenFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="113" column="42" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
+            <state relative-caret-position="462">
+              <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -156,8 +140,8 @@
         <option value="$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/trang/form/PackageForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/trang/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/trang/method/GenFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java" />
       </list>
     </option>
@@ -314,12 +298,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541317433640</updated>
       <workItem from="1544030769158" duration="120000" />
-      <workItem from="1544031721549" duration="6041000" />
+      <workItem from="1544031721549" duration="6541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6161000" />
+    <option name="totallyTimeSpent" value="6661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -339,7 +323,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1954612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1954612" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -812,26 +796,26 @@
     <entry file="file://$PROJECT_DIR$/methodlist.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-490">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classlist.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/GenFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="113" column="42" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
+        <state relative-caret-position="462">
+          <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/trang/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
+        <state relative-caret-position="-184">
           <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -842,7 +826,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+          <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

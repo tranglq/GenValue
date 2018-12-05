@@ -1,8 +1,5 @@
 START CLASSLITERALS
 CLASSNAME
-trang.MyMatrix
+trang.form.ClassForm
 LITERALS
-int:-789
-int:-789
-int:-486
 END CLASSLITERALS

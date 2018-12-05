@@ -1,18 +1,5 @@
 START CLASSLITERALS
 CLASSNAME
-trang.MyMatrix
+trang.controller.Controller
 LITERALS
-int:33
-int:44
-int:-22
-int:55
-int:33
-int:44
-double:11
-double:25
-double:56
-double:96
-double:45
-double:36
-double:33
 END CLASSLITERALS

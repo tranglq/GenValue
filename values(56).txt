@@ -1,5 +1,5 @@
 START CLASSLITERALS
 CLASSNAME
-trang.AppTest
+trang.method.BrowserFolder
 LITERALS
 END CLASSLITERALS

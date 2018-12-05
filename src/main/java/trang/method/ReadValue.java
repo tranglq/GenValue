@@ -1,5 +1,7 @@
 package trang.method;
 
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -17,7 +19,7 @@ import java.util.List;
 
 public class ReadValue {
 	
-	private XSSFWorkbook  workbook;
+	private HSSFWorkbook workbook;
 	private CellType celltype;
 	private PackageForm pack;
 
@@ -44,8 +46,8 @@ public class ReadValue {
 		if(CheckFile(filedes)) {
 			FileInputStream input = new FileInputStream(new File(filedes.getFileDest()+filedes.getFileName()));
 
-			workbook = new XSSFWorkbook (input);
-			XSSFSheet sheet = workbook.getSheetAt(0);
+			workbook = new HSSFWorkbook(input);
+			HSSFSheet sheet = workbook.getSheetAt(0);
 			
 			Iterator<Row> rowiterator = sheet.iterator();
 			

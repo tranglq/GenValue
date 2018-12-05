@@ -71,7 +71,7 @@ public class GenFileExcel {
         }
         FileNameForm fileNameForm = new FileNameForm();
         fileNameForm.setFileDest("");
-        fileNameForm.setFileName("Excel.xlsx");
+        fileNameForm.setFileName("Excel.xls");
         File file = new File(fileNameForm.get());
 
         FileOutputStream outFile = new FileOutputStream(file);

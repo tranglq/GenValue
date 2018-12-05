@@ -111,7 +111,7 @@ public class GenFile {
     public static List<PackageForm> ReadFile() throws IOException {
         FileNameForm filesource = new FileNameForm();
         filesource.setFileDest(".\\");
-        filesource.setFileName("Excel.xlsx");
+        filesource.setFileName("Excel.xls");
         ReadValue readvalue = new ReadValue();
         return readvalue.readPackage(filesource);
 
