@@ -30,7 +30,7 @@ public class Controller {
                 ReadJavaFile readJavaFile = new ReadJavaFile();
                 List<PackageForm> list = readJavaFile.readJavaFile(pathlist.get(i));
                 GenFileExcel genFileExcel = new GenFileExcel();
-                genFileExcel.genFileExcel("ExcelFile("+ i + ").xlsx", list);
+                genFileExcel.genFileExcel("ExcelFile("+ i + ").xls", list);
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -28,7 +28,9 @@ public class ReadJavaFile {
             if (words[i].equals("package")){
                 i++;
                 int lengthPackName = (words[i]).length();
-                packagename = words[i].substring(0, lengthPackName-1); //lay chuoi package bo di kyy tu ";" o cuoi chuoi
+
+                if (lengthPackName<1) packagename = null;
+                else packagename = words[i].substring(0, lengthPackName-1); //lay chuoi package bo di kyy tu ";" o cuoi chuoi
             }
 
             if (words[i].equals("class")){
