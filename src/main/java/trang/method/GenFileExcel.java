@@ -52,25 +52,28 @@ public class GenFileExcel {
 //        cell.setCellStyle(style);
 
         // Data
-        for (int i = 0; i< list.size(); i++) {
-            rownum++;
-            row = sheet.createRow(rownum);
+        if (!list.isEmpty())
+        {
 
-            // EmpNo (A)
-            cell = row.createCell(0, CellType.STRING);
-            cell.setCellValue(list.get(i).getPackage());
-            // EmpName (B)
-            cell = row.createCell(1, CellType.STRING);
-            cell.setCellValue(list.get(i).getClassname());
-            // Salary (C)
-            cell = row.createCell(2, CellType.STRING);
-            cell.setCellValue(list.get(i).getMethod());
-            // Grade (D)
-            if (!list.get(i).getTypeName().isEmpty()){
-                cell = row.createCell(3, CellType.STRING);
-                cell.setCellValue(list.get(i).getTypeName());
+            for (int i = 0; i< list.size(); i++) {
+                rownum++;
+                row = sheet.createRow(rownum);
+
+                // EmpNo (A)
+                cell = row.createCell(0, CellType.STRING);
+                cell.setCellValue(list.get(i).getPackage());
+                // EmpName (B)
+                cell = row.createCell(1, CellType.STRING);
+                cell.setCellValue(list.get(i).getClassname());
+                // Salary (C)
+                cell = row.createCell(2, CellType.STRING);
+                cell.setCellValue(list.get(i).getMethod());
+                // Grade (D)
+//                if (!list.get(i).getTypeName().isEmpty()) {
+                    cell = row.createCell(3, CellType.STRING);
+                    cell.setCellValue(list.get(i).getTypeName());
+//                }
             }
-
         }
 
         FileNameForm fileNameForm = new FileNameForm();        fileNameForm.setFileDest("");

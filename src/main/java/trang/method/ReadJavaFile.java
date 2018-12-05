@@ -18,7 +18,7 @@ public class ReadJavaFile {
 
         String data = fileNameForm.readFile();
         String[] words = data.split("\\s");
-        PackageForm packageForm = new PackageForm();
+
 
         String packagename = null;
         String classname = null;
@@ -105,6 +105,7 @@ public class ReadJavaFile {
                     }
 
                     if (type.isEmpty()){
+                        PackageForm packageForm = new PackageForm();
                         packageForm.setPackage(packagename);
                         packageForm.setClass(classname);
                         packageForm.setMethod(methodname);
@@ -123,6 +124,7 @@ public class ReadJavaFile {
                             }
                         }
                         for (int k = 0; k < type.size(); k++) {
+                            PackageForm packageForm = new PackageForm();
                             packageForm.setPackage(packagename);
                             packageForm.setClass(classname);
                             packageForm.setMethod(methodname);
