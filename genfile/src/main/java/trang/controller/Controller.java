@@ -20,7 +20,7 @@ public class Controller {
         System.out.println("Enter java folder path: ");
 //        folderPath = scanner.nextLine();
 //        saveExcel = scanner.nextLine();
-        folderPath = "./genfile/";
+        folderPath = "./";
         BrowserFolder brFolder = new BrowserFolder();
         List<String> pathlist = brFolder.browserFolder(folderPath);
 
