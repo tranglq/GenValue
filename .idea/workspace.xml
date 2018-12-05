@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87114d81-2a14-4036-8561-f09d3b5b3ce4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trang/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/trang/method/JavaFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/method.txt" beforeDir="false" afterPath="$PROJECT_DIR$/method.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.Value1.xlsx#" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/values(0).txt" beforeDir="false" afterPath="$PROJECT_DIR$/values(0).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/values(1).txt" beforeDir="false" afterPath="$PROJECT_DIR$/values(1).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/values(2).txt" beforeDir="false" afterPath="$PROJECT_DIR$/values(2).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/values(3).txt" beforeDir="false" afterPath="$PROJECT_DIR$/values(3).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/values(4).txt" beforeDir="false" afterPath="$PROJECT_DIR$/values(4).txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
+            <state relative-caret-position="340">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,10 +42,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trang/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+            <state relative-caret-position="303">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,23 +54,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javafile.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/JavaFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            <state relative-caret-position="289">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding>
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#320#321#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/List.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="127" column="12" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
+            <state relative-caret-position="352">
+              <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,6 +126,8 @@
         <option value="$PROJECT_DIR$/src/main/java/trang/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/trang/method/GenFileExcel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trang/method/JavaFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trang/controller/Controller.java" />
       </list>
     </option>
   </component>
@@ -173,21 +171,11 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GenValue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GenValue" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543991166141" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543994008216" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -257,7 +245,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.30854607" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.30854607" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3973363" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -266,15 +254,15 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.39869988" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.09701493" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.09701493" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -348,37 +336,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java</url>
-          <line>143</line>
+          <line>141</line>
           <properties />
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java</url>
-          <line>131</line>
+          <line>129</line>
           <properties />
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java</url>
-          <line>127</line>
+          <line>125</line>
           <properties />
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java</url>
-          <line>128</line>
+          <line>126</line>
           <properties />
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java</url>
-          <line>129</line>
+          <line>127</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java</url>
-          <line>130</line>
+          <line>128</line>
           <properties />
           <option name="timeStamp" value="124" />
         </line-breakpoint>
@@ -523,16 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javafile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -548,6 +526,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/ReadJavaFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trang/method/JavaFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trang/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

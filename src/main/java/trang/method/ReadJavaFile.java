@@ -4,8 +4,6 @@ import trang.form.FileNameForm;
 import trang.form.PackageForm;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
