@@ -40,8 +40,10 @@ public class ReadValue {
 	// đọc file .xlsx
 	public List<PackageForm> readPackage(FileNameForm filedes) throws IOException {
 		List<PackageForm> packlist = new ArrayList<>();
+
 		if(CheckFile(filedes)) {
 			FileInputStream input = new FileInputStream(new File(filedes.getFileDest()+filedes.getFileName()));
+
 			workbook = new XSSFWorkbook (input);
 			XSSFSheet sheet = workbook.getSheetAt(0);
 			

@@ -70,4 +70,8 @@ public class PackageForm<typename> {
 	public String writeMethod(){
 		return this.getPackage() + "." + this.getClassname() + "." + this.getMethod();
 	}
+
+	public String writeClass(){
+		return this.getPackage()+"."+this.getClassname();
+	}
 }
